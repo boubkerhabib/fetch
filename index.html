@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Atlas Voyages – Explorer le monde</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+        <!-- Police Google Fonts : Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+        />
+
+        <!-- Si tu utilises un framework CSS (Bootstrap, Tailwind…), ajoute son lien ICI, AVANT style.css
+        <link rel="stylesheet" href="style.css" /> -->
+
+        <!-- defer : le script s'exécute une fois le HTML chargé -->
+        <script src="script.js" defer></script>
+    </head>
+    <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+        <header class="bg-white border-b border-slate-200 shadow-sm">
+            <div class="max-w-7xl mx-auto px-5 py-5">
+                <h1 class="text-2xl md:text-3xl font-extrabold text-blue-700">Atlas Voyeges</h1>
+
+                <p class="text-sm md:text-base text-slate-500 mt-1">Explorer le monde</p>
+            </div>
+        </header>
+
+        <main class="flex-grow max-w-7xl w-full mx-auto px-5 py-10">
+            <section class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+                    Explorer le monde
+                </h2>
+
+                <p class="text-slate-500 text-sm md:text-base max-w-2xl mx-auto">
+                    Choisis un continent, parcours les pays et trouve ta prochaine destination.
+                </p>
+            </section>
+
+            <section id="Inputs"
+                class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-7 mb-10">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- CONTINENT -->
+                    <div class="input-group flex flex-col gap-2">
+
+                        <label for="pays" class="font-semibold text-sm text-slate-700">
+                            Continent
+                        </label>
+
+                        <select name="pays" id="pays"
+                            class="w-full p-3 border border-slate-300 rounded-xl bg-slate-50 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition">
+
+                            <option value="Africa">Afrique</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Asia">Asie</option>
+                            <option value="Americas">Amérique</option>
+                            <option value="Oceania">Oceanie</option>
+
+                        </select>
+                    </div>
+
+                    <div class="input-group flex flex-col gap-2">
+
+                        <label for="input1" class="font-semibold text-sm text-slate-700">
+                            Rechercher un pays
+                        </label>
+
+                        <input type="text" id="input1"
+                            placeholder="Ex. : Morocco"
+                            class="w-full p-3 border border-slate-300 rounded-xl bg-slate-50 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition">
+
+                    </div>
+
+                    <div class="input-sort flex flex-col gap-2">
+
+                        <label for="sort" class="font-semibold text-sm text-slate-700">
+                            Trier par population
+                        </label>
+
+                        <select id="sort"
+                            class="w-full p-3 border border-slate-300 rounded-xl bg-slate-50 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition">
+
+                            <option value="none">Aucun tri</option>
+                            <option value="population">Plus peuplé</option>
+
+                        </select>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="countriesContainer"
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+            </section>
+
+        </main>
+        <footer class="bg-white border-t border-slate-200 mt-10">
+
+            <div class="max-w-7xl mx-auto px-5 py-6 text-center">
+
+                <p class="text-sm text-slate-500">
+                    © 2026 Atlas Voyages · Données :
+                    <span class="font-semibold text-blue-600">countries.dev</span>
+                </p>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>
